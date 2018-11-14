@@ -1,0 +1,31 @@
+{
+  "receivers": [
+    "微视联软件"
+  ],
+  "contact_group": [
+    {
+      "group_id": "ww5728cc14117a3e90",
+      "group_name": "微视联软件",
+      "contacts": [
+        "1",
+        "2"
+      ]
+    }
+  ],
+  "contacts": [
+    {
+      "contact_id": "1",
+      "name": "冉忠庚",
+      "email": "1445159429@qq.com",
+      "phone": "18382174181",
+      "wechat": "18382174181"
+    },
+    {
+      "contact_id": "2",
+      "name": "冉忠庚",
+      "email": "1445159429@qq.com",
+      "phone": "18382174181",
+      "wechat": "RanZhongGeng"
+    }
+  ]
+}

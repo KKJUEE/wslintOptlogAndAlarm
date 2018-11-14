@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet><!-- 告警查询、下发接口 -->
+      <servlet-name>AlarmServlet</servlet-name>
+      <servlet-class>cn.succy.alarm.servlet.AlarmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>AlarmServlet</servlet-name>
+      <url-pattern>/getJson</url-pattern>
+  </servlet-mapping>
+  
+  <servlet><!-- 告警联系人查询 -->
+      <servlet-name>ContactServlet</servlet-name>
+      <servlet-class>cn.succy.alarm.servlet.ContactServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>ContactServlet</servlet-name>
+      <url-pattern>/contact</url-pattern>
+  </servlet-mapping>
+  <servlet><!-- 告警联系人操作 -->
+      <servlet-name>ContactOperation</servlet-name>
+      <servlet-class>cn.succy.alarm.servlet.ContactOperation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>ContactOperation</servlet-name>
+      <url-pattern>/contact/operation</url-pattern>
+  </servlet-mapping>
+  <servlet><!-- 日志操作 -->
+      <servlet-name>OptlogServlet</servlet-name>
+      <servlet-class>cn.succy.alarm.servlet.OptlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>OptlogServlet</servlet-name>
+      <url-pattern>/optlog/operation</url-pattern>
+  </servlet-mapping>
+  <servlet><!-- 日志添加 -->
+      <servlet-name>AddOptlogServlet</servlet-name>
+      <servlet-class>cn.succy.alarm.servlet.AddOptlogServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>AddOptlogServlet</servlet-name>
+      <url-pattern>/optlog/add</url-pattern>
+  </servlet-mapping>
+  <filter>  
+     <filter-name>HeaderFilter</filter-name>  
+     <filter-class>cn.succy.alarm.filter.HeaderFilter</filter-class><!--过滤器的包 -->  
+   </filter>  
+   <filter-mapping>  
+     <filter-name>HeaderFilter</filter-name>  
+     <url-pattern>/*</url-pattern><!-- 开放的接口前缀  -->  
+   </filter-mapping>
+</web-app>
